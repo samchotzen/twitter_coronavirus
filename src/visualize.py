@@ -14,7 +14,7 @@ import json
 from collections import Counter,defaultdict
 #import pandas as pd
 import matplotlib
-matplotlib.use('Agg')
+#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 #import numpy as np
 
@@ -33,7 +33,7 @@ for k,v in items:
     print(k,':',v)
 
 # create sorted dictionary before plotting
-lists = sorted(sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)[:10], key=lambda kv: kv[1], reverse=True)
+lists = sorted(sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)[:10], key=lambda kv: kv[1])
 key, value = zip(*lists)
 
 # create bar graphs
@@ -57,4 +57,4 @@ else:
     plt.title("Tweets with " + args.key + " from each country in 2020")
 
 # save the bar graph file to plots folder
-plt.savefig(args.input_path + args.key + '.png')
+plt.savefig(args.input_path + args.key + 'b.png')
