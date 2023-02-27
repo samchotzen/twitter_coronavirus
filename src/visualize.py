@@ -32,15 +32,19 @@ items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), rev
 for k,v in items:
     print(k,':',v)
 
+#lists = sorted(items.items())
+#key, value = zip(*lists)
+
 # create the dataframes and bar graphs
 key = []
 value = []
 for k,v in items:
     key.append(k)
     value.append(v)
-df = pd.DataFrame({'key':key[:10], 'value':value[:10]})
-df.sort_values(by=['value'])
-plt.bar(df['key'], sorted(df['value']), color = 'maroon', width = 0.4)
+plt.bar(key, value, color = 'maroon', width = 0.4)
+#df = pd.DataFrame({'key':key[:10], 'value':value[:10]})
+#df.sort_values(by=['value'])
+#plt.bar(df['key'], sorted(df['value']), color = 'maroon', width = 0.4)
 
 if args.input_path == 'reduced.lang':
     plt.xlabel("Language")
