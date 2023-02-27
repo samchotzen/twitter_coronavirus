@@ -34,14 +34,14 @@ for k,v in items:
 
 # create sorted dictionary before plotting
 lists = sorted(sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)[:10], key=lambda kv: kv[1])
-#key, value = zip(*lists)
+key, value = zip(*lists)
 
 # create bar graphs
-key = []
-value = []
-for k,v in lists:
-    key.append(k)
-    value.append(v)
+#key = []
+#value = []
+#for k,v in lists:
+#    key.append(k)
+#    value.append(v)
 plt.bar(key, value, color = 'maroon', width = 0.4)
 #df = pd.DataFrame({'key':key[:10], 'value':value[:10]})
 #df.sort_values(by=['value'])
