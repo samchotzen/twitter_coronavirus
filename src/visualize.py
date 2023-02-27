@@ -40,7 +40,7 @@ for k,v in items:
     value.append(v)
 df = pd.DataFrame({'key':key[:10], 'value':value[:10]})
 df.sort_values(by=['value'])
-plt.bar(df['key'], df['value'], color = 'maroon', width = 0.4)
+plt.bar(df['key'], sorted(df['value']), color = 'maroon', width = 0.4)
 
 if args.input_path == 'reduced.lang':
     plt.xlabel("Language")
