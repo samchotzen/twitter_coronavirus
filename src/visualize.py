@@ -12,11 +12,10 @@ args = parser.parse_args()
 import os
 import json
 from collections import Counter,defaultdict
-#import pandas as pd
 import matplotlib
-#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-#import numpy as np
+import matplotlib.font_manager as fm
+matplotlib.rcParams['font.family'] = ['./download?family=Noto Sans KR', 'sans-serif']
 
 # open the input path
 with open(args.input_path) as f:
@@ -36,16 +35,8 @@ for k,v in items:
 lists = sorted(sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)[:10], key=lambda kv: kv[1])
 key, value = zip(*lists)
 
-# create bar graphs
-#key = []
-#value = []
-#for k,v in lists:
-#    key.append(k)
-#    value.append(v)
+# create bar graph
 plt.bar(key, value, color = 'maroon', width = 0.4)
-#df = pd.DataFrame({'key':key[:10], 'value':value[:10]})
-#df.sort_values(by=['value'])
-#plt.bar(df['key'], sorted(df['value']), color = 'maroon', width = 0.4)
 
 if args.input_path == 'reduced.lang':
     plt.xlabel("Language")
@@ -56,5 +47,5 @@ else:
     plt.ylabel("Usage level of " + args.key)
     plt.title("Tweets with " + args.key + " from each country in 2020")
 
-# save the bar graph file to plots folder
-plt.savefig(args.input_path + args.key + 'b.png')
+# save bar graph file to plots folder
+plt.savefig(args.input_path + args.key + 'ba.png')
