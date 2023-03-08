@@ -1,5 +1,4 @@
 # Coronavirus twitter analysis
-
 You will scan all geotagged tweets sent in 2020 to monitor for the spread of the coronavirus on social media.
 
 **Due date:** 
@@ -169,6 +168,16 @@ Complete the following tasks:
     You must edit the `README.md` file to provide a brief explanation of your results.
     This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished.
     (And you should tell them about this in your interviews!)
+
+## Results
+I generated four png images displaying the top 10 languages and countries that tweeted #coronavirus and #코로나바이러스 sorted in
+ascending order. I used visualize.py to create the graphs. I ran visualize.py on the reduced.lang and reduced.country files with
+the #coronavirus and #코로나바이러스 keys to create the four graphs. The graphs are all in the plots folder along with files that
+display the exact number of tweets corresponding to the usage rate in each of the graphs.
+![#Coronavirus Tweets By Language](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.lang%23coronavirus.png)
+![#코로나바이러스 Tweets By Language](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.lang%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.png)
+![#Coronavirus Tweets By Country](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.country%23coronavirus.png)
+![#코로나바이러스 Tweets By Country](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.country%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.png)
 
 ## Submission
 
