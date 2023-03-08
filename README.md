@@ -170,10 +170,10 @@ Complete the following tasks:
     (And you should tell them about this in your interviews!)
 
 ## Results
-I generated four png images displaying the top 10 languages and countries that tweeted `#coronavirus` and `#코로나바이러스` in 2020 
-sorted in ascending order. I used `visualize.py` to create the graphs by running it on the `reduced.lang` and `reduced.country` files 
-with the `#coronavirus` and `#코로나바이러스`. The graphs are all in the `plots` folder along with four other files that display the 
-exact number of tweets corresponding to the usage rate in each of the graphs. 
+I generated four png images displaying the top 10 languages and countries that tweeted `#coronavirus` and `#코로나바이러스` in 2020
+sorted in ascending order. I used `visualize.py` to create the graphs by running it on the `reduced.lang` and `reduced.country` files
+with the `#coronavirus` and `#코로나바이러스` keys. The graphs are all in the `plots` folder along with four other files that display
+the exact number of tweets corresponding to the usage rate in each of the graphs. 
 
 ![#Coronavirus Tweets By Language](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.lang%23coronavirus.png)
 ![#코로나바이러스 Tweets By Language](https://raw.githubusercontent.com/samchotzen/twitter_coronavirus/master/plots/reduced.lang%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.png)
